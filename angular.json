@@ -96,6 +96,37 @@
           }
         }
       }
+    },
+    "testable-inject": {
+      "projectType": "library",
+      "root": "projects/testable-inject",
+      "sourceRoot": "projects/testable-inject/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/testable-inject/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/testable-inject/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/testable-inject/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/testable-inject/src/test.ts",
+            "tsConfig": "projects/testable-inject/tsconfig.spec.json",
+            "karmaConfig": "projects/testable-inject/karma.conf.js"
+          }
+        }
+      }
     }
   }
 }

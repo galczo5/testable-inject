@@ -1,5 +1,5 @@
-import {Component, ElementRef, Renderer2} from '@angular/core';
-import {inject} from "../../projects/testable-inject/src/lib/inject";
+import {Component, ElementRef, Renderer2} from "@angular/core";
+import {inject} from "testable-inject";
 
 @Component({
   selector: 'app-root',

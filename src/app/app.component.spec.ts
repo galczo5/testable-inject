@@ -1,5 +1,5 @@
-import { AppComponent } from './app.component';
-import {Inject} from "../../projects/testable-inject/src/lib/inject";
+import {AppComponent} from "./app.component";
+import {Inject} from "testable-inject";
 import {Renderer2} from "@angular/core";
 
 describe('AppComponent', () => {
@@ -14,7 +14,7 @@ describe('AppComponent', () => {
       }
     } as unknown as Renderer2)
 
-    new AppComponent({ nativeElement: null });
+    new AppComponent({nativeElement: null});
 
     expect(itWorked).toBeTruthy();
   });
